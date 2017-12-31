@@ -28,7 +28,7 @@ stages{
                 stage ('Deploy to Staging'){
                     steps {
                        // sh "scp -i /home/jenkins/tomcat-demo.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
-                         sh "cp -i /usr/lib/jenkins/jenkins.war /usr/share/tomcat8/webapps"
+                         sh "cp -i /var/lib/jenkins/workspace/PipelineAsCodeEg1/webapp/target/webapp.war /usr/share/tomcat8/webapps"
                     }
                 }
 
